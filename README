@@ -1,0 +1,16 @@
+How to use the code
+
+
+The Polulu current sensor outputs a base voltage of the VCC/2(Roughly), and then is raised additionally 
+based on the current going through the sensor at a flat rate that is dependent on the VCC. 
+
+A steady conversion rate is heavily dependent on a steady VCC. The code below uses manual input 
+to set whether or not there is a dc input and to set the base voltage outputted by the sensor,
+as we are only calculating the additional voltage. 
+
+Normally we could just use the formula and subtract the converted value from the solution 
+to automate the calculation, but the sensor is very finicky, the ADC is very finicky and 
+the formula is not very accurate, so we need a manual benchmark taken to get an accurate
+reading.  
+
+You will likely need to configurate both the base and the conversion rate based on your implementation
